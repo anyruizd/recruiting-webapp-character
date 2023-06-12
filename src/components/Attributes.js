@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CharacterContext, CharacterDispatchContext } from "./CharacterContext.js";
+import { CharacterContext, CharacterDispatchContext } from "../context/CharacterContext.js";
 import { ATTRIBUTE_LIST } from "../consts.js";
 
 export function Attributes() {

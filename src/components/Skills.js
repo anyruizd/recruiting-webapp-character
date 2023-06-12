@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { CharacterContext, CharacterDispatchContext } from "./CharacterContext.js";
+import { CharacterContext, CharacterDispatchContext } from "../context/CharacterContext.js";
 import { SKILL_LIST } from "../consts.js";
 
 export function Skills() {

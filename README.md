@@ -1,6 +1,13 @@
 # recruiting-webapp-character
 React coding test
 
+# Implementation details 👩🏻‍💻
+
+- This application was built using the template provided [here](https://github.com/policyme-recruiting/recruiting-webapp-character)
+- The requirements achieved were 1-6.
+- The state of the app is managed using the react `Context API` and `useReducer` hook in this `src/context/CharacterContext.js` file. 
+- The data sending and receiving was implemented using the `fetch` API.
+
 # Create a repository from this template
 - Click on `Use this template` dropdown on this repo page.
 - select `Create a new repository`

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CharacterContext } from "./CharacterContext.js";
+import { CharacterContext } from "../context/CharacterContext.js";
 import { ClassItem } from './ClassItem.js';
 import { CLASS_LIST } from "../consts.js";
 import { calculateIsActive } from "../utils/utils.js";
