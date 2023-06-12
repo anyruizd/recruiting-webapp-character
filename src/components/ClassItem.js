@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const ClassItem = ({requirements, title, isActive}) => {
+export function ClassItem({requirements, title, isActive}) {
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = () => {
         setIsOpen(!isOpen);
