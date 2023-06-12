@@ -1,5 +1,6 @@
 import { createContext } from 'react';
 import { calculateModifier } from "../utils/utils.js";
+import { saveCharacter } from "../utils/data.js";
 
 export const CharacterContext = createContext(null);
 export const CharacterDispatchContext = createContext(null);
@@ -18,6 +19,7 @@ export function characterReducer(character, action) {
                     [action.attribute]: calculateModifier(action.value) 
                 }
             }
+            saveCharacter(newState);
             return newState;
         }
         case 'UPDATE_SKILL': {
@@ -27,6 +29,14 @@ export function characterReducer(character, action) {
                     ...character.skills,
                     [action.skill]: action.value
                 }
+            }
+            saveCharacter(newState);
+            return newState;
+        }
+        case 'UPDATE_ALL': {
+            const newState = {
+                ...character,
+                ...action.data
             }
             return newState;
         }

@@ -52,7 +52,7 @@ export function Skills() {
             <p className="error-message">{errorMessage}</p>
             <ul>
                 {SKILL_LIST.map(({ name, attributeModifier }) => { 
-                    const id = name.split(' ').join('');
+                    const id = name.split(' ').join(''); // make id one single word
                     const skillValue = skills[id];
                     const modifierValue = attributeModifiers[attributeModifier];
                     const total = skillValue + modifierValue;

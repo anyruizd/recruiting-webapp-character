@@ -1,13 +1,27 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { Attributes } from './components/Attributes.js';
 import { Classes } from './components/Classes.js';
 import { Skills } from './components/Skills.js';
 import { CharacterContext, CharacterDispatchContext, initialCharacter, characterReducer } from "./components/CharacterContext.js";
+import { getCharacter } from './utils/data.js'
 
 import './App.css';
 
 function App() {
     const [character, dispatch] = useReducer(characterReducer, initialCharacter);
+
+    useEffect(() => {
+        let mounted = true;
+        getCharacter().then(data => {
+            if(mounted) {
+                dispatch({
+                    type: 'UPDATE_ALL',
+                    data: data.body.character
+                });
+            }
+        })
+        return () => mounted = false;
+    }, []);
 
     return (
         <CharacterContext.Provider value={character}>
