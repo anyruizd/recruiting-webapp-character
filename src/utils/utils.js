@@ -6,3 +6,7 @@ export const calculateIsActive = (requirements, attributes) => {
     }
     return true;
 }
+
+export const calculateModifier = (points) => {
+    return Math.floor((points - 10)/2)
+};

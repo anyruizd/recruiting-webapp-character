@@ -1,6 +1,6 @@
 import { ClassItem } from "./ClassItem.js";
 import { CLASS_LIST } from "../consts.js";
-import { calculateIsActive } from "../utils/index.js";
+import { calculateIsActive } from "../utils/utils.js";
 
 export function Classes({attributes}) {
     return (
